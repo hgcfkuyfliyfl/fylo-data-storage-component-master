@@ -1,0 +1,43 @@
+ /* Reset default browser styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Light gray background for contrast */
+}
+
+/* Box styling */
+.sharp-corner-box {
+  position: relative;
+  background-color: #007bff; /* Blue background */
+  border: 2px solid #0056b3; /* Darker blue border */
+  padding: 20px;
+  width: 250px;
+  height: 150px;
+  color: white; /* Text color */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 20px; /* Apply border radius to all corners */
+}
+
+/* Pseudo-element to mask the bottom-right corner */
+.sharp-corner-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: px; /* Adjust width to match the corner radius */
+  height: 90px; /* Adjust height to match the corner radius */
+  background-color: #007bff; /* Same color as the box */
+  border-bottom: 2px solid #0056b3; /* Darker blue border to match the box */
+  border-right: 2px solid #0056b3; /* Darker blue border to match the box */
+   
+}
